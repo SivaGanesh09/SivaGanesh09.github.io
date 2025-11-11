@@ -1,98 +1,146 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* === Base Reset === */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    color: rgb(20, 20, 20);
-    background-color: rgb(231, 223, 223);
+
+/* === Global Styles === */
+body {
+  color: rgb(20, 20, 20);
+  background-color: rgb(231, 223, 223);
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
 }
-#navbar{
-    height: 100px;
+
+/* === Navbar === */
+#navbar {
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+
+#navbar ul {
+  font-size: 20px;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#navbar a:hover {
+  color: blue;
+}
+
+#sivaganesh {
+  position: relative;
+  left: -60px;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+/* === Desktop positioning (retain layout) === */
+#home { position: relative; left: 400px; }
+#about { position: relative; left: 300px; }
+#projects { position: relative; left: 200px; }
+#contact { position: relative; left: 100px; }
+
+/* === Page Content === */
+h1 {
+  position: relative;
+  top: 100px;
+  left: 150px;
+}
+
+svg {
+  position: relative;
+  top: 139px;
+  left: 100px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 a:hover {
+  color: blue;
+}
+
+/* === Hamburger Button (Hidden on Desktop) === */
+#menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+}
+
+/* === Responsive (Android/Tablet) === */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  #menu-toggle {
+    display: block;
+  }
+
+  /* Navbar stacked view */
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.85);
     width: 100%;
-    position: relative;
-}
-#navbar>ul{
-    font-size: 20px;
+    padding: 15px 0;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  #navbar ul.open {
     display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    position: relative;
-    top: 30px;
-}
+  }
 
-#navbar>ul>#sivaganesh>a>li{
-    color: rgb(255, 255, 255);
-}
-#navbar>ul>#home>a>li{
-    color: white;
-}
-#navbar>ul>#about>a>li{
-    color: white;
-}
-#navbar>ul>#projects>a>li{
-    color: white;
-}
-#navbar>ul>#contact>a>li{
-    color: white;
-}
+  /* Reset nav item offsets */
+  #home, #about, #projects, #contact {
+    position: static;
+  }
 
-#navbar>ul>#sivaganesh>a>li:hover{
-    color: blue;
-}
-#navbar>ul>#home>a>li:hover{
-    color: blue;
-}
-#navbar>ul>#about>a>li:hover{
-    color: blue;
-}
-#navbar>ul>#projects>a>li:hover{
-    color: blue;
-}
-#navbar>ul>#contact>a>li:hover{
-    color: blue;
-}
-a{
-    text-decoration: none;
-}
-#sivaganesh{
-    position: relative;
-    left: -60px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-    font-size: xx-large;
-}
-#home{
-    position: relative;
-    left: 400px;
-}
-#about{
-    position: relative;
-    left: 300px;
-}
-#projects{
-    position: relative;
-    left: 200px;
-}
-#contact{
-    position: relative;
-    left: 100px;
-}
+  /* Page content mobile layout */
+  body {
+    text-align: center;
+  }
 
-h1{
-    position: relative;
-    top: 100px;
-    left: 150px;
-}
-svg{
-    position: relative;
-    top: 139px;
-    left: 100px;
-}
-h1>a{
-    text-decoration: none;
-    color: inherit; 
-}
-h1>a:hover{
+  h1 {
+    position: static;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+
+  svg {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+    width: 60px;
+    height: 60px;
+  }
+
+  h1 a {
+    color: black;
+    font-weight: bold;
+  }
+
+  h1 a:hover {
     color: blue;
+  }
 }
