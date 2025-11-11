@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siva Ganesh | Portfolio</title>
+  <link rel="stylesheet" href="./Sivaganesh.css" />
 </head>
 <body>
-    <h1 style="color: red;">Siva Ganesh</h1>
+
+  <!-- ✅ Responsive Navbar -->
+  <header id="navbar">
+    <button id="menu-toggle">☰</button>
+    <ul id="nav-list">
+      <li id="sivaganesh"><a href="">Siva Ganesh</a></li>
+      <li id="home"><a href="./Home.html">Home</a></li>
+      <li id="about"><a href="./About.html">About</a></li>
+      <li id="projects"><a href="./Projects.html">Projects</a></li>
+      <li id="contact"><a href="./Contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- ✅ Hero Section -->
+  <main id="hero">
+    <div class="intro">
+      <h1>Hello<span class="dot">.</span></h1>
+      <h2>I'm <span class="name">Siva Ganesh</span></h2>
+      <h3>Software Developer</h3>
+      <p>
+        Passionate about designing and developing efficient software solutions.  
+        Skilled in <strong>Java</strong>, <strong>SQL</strong>, and <strong>Python</strong>.  
+        Always eager to learn and explore new technologies.
+      </p>
+
+      <div class="buttons">
+        <a href="./Projects.html" class="btn">View Projects</a>
+        <a href="https://drive.google.com/file/d/1TxdE0XFtpkknvUAUqmAAuRBcdNcixLHT/view?usp=drivesdk"
+           class="btn resume" target="_blank">Download Resume</a>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="./raju.jpeg" alt="Siva Ganesh photo" />
+    </div>
+  </main>
+
+  <!-- ✅ Navbar Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    toggleBtn.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+  </script>
+
 </body>
 </html>
