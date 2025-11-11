@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./index.css">
+  <meta charset="UTF-8">
+  <!-- ✅ Added correct viewport for Android scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div id="navbar">
-        <ul>
-            <div id="sivaganesh"><a href=""><li>Siva Ganesh</li></a></div>
-            <div id="home"><a href="./Home.html" target="_self"><li>Home</li></a></div>
-            <div id="about"><a href="./About.html" target="_parent"><li>About</li></a></div>
-            <div id="projects"><a href="./Projects.html" target="_parent"><li>Project</li></a></div>
-            <div id="contact"><a href="./Contact.html" target="_parent"><li>Contact</li></a></div>
-        </ul>
-    </div>
 
-    <h1>Hello</h1>
-    <div id="dot"><h1>.</h1></div>
-    <hr style="width: 7%;"> 
+  <!-- ✅ Added header + mobile menu toggle for small screens -->
+  <header id="navbar">
+    <button id="menu-toggle">☰</button>
+    <ul id="nav-list">
+      <li id="sivaganesh"><a href="">Siva Ganesh</a></li>
+      <li id="home"><a href="./Home.html" target="_self">Home</a></li>
+      <li id="about"><a href="./About.html" target="_parent">About</a></li>
+      <li id="projects"><a href="./Projects.html" target="_parent">Project</a></li>
+      <li id="contact"><a href="./Contact.html" target="_parent">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <h1>Hello<span id="dot">.</span></h1>
+    <hr style="width: 7%;">
     <p>I'm Siva</p>
     <h2>Software Developer</h2>
 
-    <img src="./raju.jpeg" alt="">
+    <img src="./raju.jpeg" alt="Siva Ganesh photo" class="profile-img">
 
-    <div id="resume"><a href="https://drive.google.com/file/d/1TxdE0XFtpkknvUAUqmAAuRBcdNcixLHT/view?usp=drivesdk">My Resume</a></div>
+    <div id="resume">
+      <a href="https://drive.google.com/file/d/1TxdE0XFtpkknvUAUqmAAuRBcdNcixLHT/view?usp=drivesdk" target="_blank">
+        My Resume
+      </a>
+    </div>
+  </main>
 
-    
+  <!-- ✅ Added simple JS to toggle nav on mobile -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    toggleBtn.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+  </script>
+
 </body>
 </html>
