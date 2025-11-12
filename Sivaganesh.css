@@ -1,0 +1,206 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Global === */
+body {
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  overflow-x: hidden;
+}
+
+/* === Navbar === */
+#navbar {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#navbar ul {
+  font-size: 20px;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#navbar a:hover {
+  color: cyan;
+}
+
+#sivaganesh {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+/* === Desktop Offsets (for large view) === */
+#home { position: relative; left: 400px; }
+#about { position: relative; left: 300px; }
+#projects { position: relative; left: 200px; }
+#contact { position: relative; left: 100px; }
+
+/* === Hamburger Button (hidden by default) === */
+#menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+}
+
+/* === Hero Section === */
+#hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px 50px;
+  text-align: left;
+}
+
+.intro {
+  max-width: 600px;
+}
+
+.intro h1 {
+  font-size: 3rem;
+}
+
+.intro .dot {
+  color: red;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  color: #00e1ff;
+}
+
+.intro h3 {
+  font-size: 1.8rem;
+  color: #f1c40f;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f8f9fa;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: #00a8ff;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0090cc;
+}
+
+.btn.resume {
+  background-color: #f39c12;
+}
+
+.btn.resume:hover {
+  background-color: #d68910;
+}
+
+.photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* === Responsive (Mobile/Android) === */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 15px 0;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  #navbar ul.open {
+    display: flex;
+  }
+
+  #home, #about, #projects, #contact {
+    position: static;
+  }
+
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro h3 {
+    font-size: 1.3rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+
+  .photo img {
+    width: 180px;
+    height: 180px;
+    margin-top: 30px;
+  }
+}
